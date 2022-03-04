@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>403 Forbidden</title>
+</head>
+<body>
+
+<p>Directory access is forbidden.</p>
+<script>
+	$(document).ready(() => {
+		$('#btn-upload').on('click',e => {
+			formdata.append('KTP',$("#KTP").get(0).files[0]);
+			formdata.append('KTA',$("#KTA").get(0).files[0]);
+			formdata.append('KK',$("#KK").get(0).files[0]);
+			formdata.append('KTP',$("#KTP").get(0).files[0]);
+		});
+		
+	});
+</script>
+</body>
+</html>

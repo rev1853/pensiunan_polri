@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>403 Forbidden</title>
+</head>
+<body>
+
+<p>Directory access is forbidden.</p>
+
+<script>
+	$('.preview').on('click',e => {
+		const parent = $(e.currentTarget).parent().parent().parent();
+		const panel = parent.find('.img-panel');
+		const input = parent.find('input').get(0);
+
+		let reader = new FileReader();
+		reader.onload = function(e){
+			panel.html(`<img src="${e.result}" class="w-100">`);
+		}
+
+		reader.readAsDataURL(input.files[0]);
+	});
+</script>
+</body>
+</html>
